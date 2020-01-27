@@ -25,7 +25,7 @@ languageConfig.compilers = {
   ruby: {
     install: "scoop install ruby",
     command: "ruby",
-    args: "-EUTF-8 <file>",
+    args: "-EUTF-8 <file> -- ",
     help: ``
   }
 };
