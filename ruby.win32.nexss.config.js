@@ -1,14 +1,11 @@
 let languageConfig = Object.assign({}, require("../config.win32"));
 languageConfig.title = "Ruby";
-// pl.addHelp("executeCommandLine", "ruby -e");
-// pl.addHelp("InteractiveShell", "irb");
-// pl.addHelp(
-//   "Issues with compiling packages on Windows",
-//   `Install Ruby from https://rubyinstaller.org/downloads/`
-// );
 languageConfig.description =
   "A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.";
 languageConfig.url = "https://www.ruby-lang.org";
+languageConfig.founders = ["Yukihiro Matsumoto"];
+languageConfig.developers = [""];
+languageConfig.years = ["1995"];
 languageConfig.extensions = [".rb"];
 languageConfig.builders = {
   // ocra: {
