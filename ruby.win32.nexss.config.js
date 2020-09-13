@@ -1,4 +1,7 @@
-let languageConfig = Object.assign({}, require("../config.win32"));
+let languageConfig = Object.assign(
+  {},
+  require(`../config.${process.platform}`)
+);
 languageConfig.title = "Ruby";
 languageConfig.description =
   "A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.";
@@ -23,8 +26,8 @@ languageConfig.compilers = {
     install: "scoop install ruby",
     command: "ruby",
     args: "-EUTF-8 <file> -- ",
-    help: ``
-  }
+    help: ``,
+  },
 };
 languageConfig.errors = require("./nexss.ruby.errors");
 languageConfig.languagePackageManagers = {
@@ -40,8 +43,8 @@ languageConfig.languagePackageManagers = {
     init: () => {},
     // if command not found in specification
     // run directly on package manager
-    else: "gem"
-  }
+    else: "gem",
+  },
 };
 
 module.exports = languageConfig;
