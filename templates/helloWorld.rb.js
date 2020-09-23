@@ -1,8 +1,18 @@
 // additional info for templates like copy extra libraries.
 // in this case library needs JSON
+const os = require("@nexssp/os");
+const getInstaller = () => {
+  switch (os.name()) {
+    case os.distros.AMAZON:
+      return ""; //No install needed
+    default:
+      return "apt install -y ruby-json";
+  }
+};
+
 const config = {
   files: [],
-  commands: [process.platform !== "win32" ? "apt install -y ruby-json" : ""],
+  commands: [getInstaller()],
   repos: [],
   descriptions: [],
 };
