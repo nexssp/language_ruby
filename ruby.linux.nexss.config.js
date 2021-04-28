@@ -9,18 +9,13 @@ languageConfig.compilers = {
   },
 };
 
-const {
-  replaceCommandByDist,
-  dist,
-} = require(`${process.env.NEXSS_SRC_PATH}/lib/osys`);
-
-const distName = dist();
+const distName = process.distro;
 languageConfig.dist = distName;
 
 // TODO: Later to cleanup this config file !!
 switch (distName) {
   default:
-    languageConfig.compilers.ruby.install = replaceCommandByDist(
+    languageConfig.compilers.ruby.install = process.replacePMByDistro(
       languageConfig.compilers.ruby.install
     );
     break;
