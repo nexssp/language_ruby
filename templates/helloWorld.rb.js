@@ -1,8 +1,7 @@
 // additional info for templates like copy extra libraries.
 // in this case library needs JSON
-const os = require("@nexssp/os");
 const getInstaller = () => {
-  switch (os.name()) {
+  switch (process.distro) {
     case os.distros.AMAZON:
       return ""; //No install needed
     default:
