@@ -29,6 +29,7 @@ languageConfig.compilers = {
     help: ``,
   },
 };
+languageConfig.run = "ruby -e";
 languageConfig.errors = require("./nexss.ruby.errors");
 languageConfig.languagePackageManagers = {
   gem: {
