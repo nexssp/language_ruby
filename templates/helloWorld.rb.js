@@ -2,7 +2,7 @@
 // in this case library needs JSON
 const getInstaller = () => {
   switch (process.distro) {
-    case os.distros.AMAZON:
+    case process.distros.AMAZON:
       return ""; //No install needed
     default:
       return "apt install -y ruby-json";
